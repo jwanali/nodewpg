@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .striked {
+            text-decoration:line-through  crimson ;
+           
+            
+        }
+        li {cursor: pointer; font-weight: bold;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        padding-left: 30px; }
+        ul {font-size: 25px;
+             font-weight: bolder;
+             padding-left: 5px;
+             font-family: Arial, Helvetica, sans-serif}
+        span {color: green; text-decoration: initial }
+    </style>
+    <script>
+        window.onload = function() {
+            
+            const ul = document.createElement('ul');
+            ul.innerText = 'weekly chores:';
+            const body = document.querySelector('body');
+            const weeklyChoreses = ['meeting my daughter\'s teacher','going to English class','fixing the car','paying bills','going with dad and mom to physiotherapy','shopping','attending Javascript course','doing homeworks','meeting friends','doing some physical activities'];
+            weeklyChoreses.forEach(function(weeklyChores) {
+            let li = document.createElement('li');
+            li.innerText = weeklyChores;
+            ul.appendChild(li);
+        });
+        body.appendChild(ul);
+        const li = document.querySelectorAll('li');
+        //const span = document.createElement('span')
+        //           span.innerText = '(done)';
+        for (let index = 0; index <= li.length - 1; index++) {
+            li[index].onclick = function() {
+                li[index].classList.toggle('striked'); 
+               // if (li[index].hasChildNodes.length > 0) {
+                 //  li[index].removeChild(span);
+               // } else {
+                 //   li[index].appendChild(span)
+               // }
+                  // console.log(li[index].children);
+                // if (li[index].children === 'span') {
+                  //  li[index].removeChild(span);
+                // } else{
+                  //  li[index].appendChild(span)
+                 //}
+                    
+                //} else {
+                  //  li[index].removeChild(span);
+              //  }
+            }
+        }
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

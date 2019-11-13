@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        let i = 1;
+        let name = '';
+        
+        const addName =function (name1) {
+            const ol = document.querySelector('ol');
+                if ( typeof name === "string" && name !== '' ) {
+                    
+                const li = document.createElement('li');
+                li.innerText = `name: ${name}`;
+                ol.appendChild(li);
+                if ( i % 2 === 0) {
+                    ol.style.color = 'gray';    
+                } else {
+                    ol.style.color = 'rgb(144,50,55)';
+                }
+               
+                i++;
+                } else {
+                    alert('please make sure it\'s string and not empty');
+                };
+        }
+        window.onload = function() {
+              
+            const k = (confirm('Do like to make a list of your favorite names?'));
+             if (k) {
+                const body = document.querySelector('body');
+                const ol = document.createElement('ol');     
+                do {
+                let name = '';
+                name = prompt ('please type the name');
+                if ( typeof name === "string" && name !== '' ) {
+                    
+                    const li = document.createElement('li');
+                li.innerText = `name: ${name}`;
+                ol.appendChild(li);
+                body.appendChild(ol);
+                if ( i % 2 === 0) {
+                    ol.style.color = 'gray';    
+                } else {
+                    ol.style.color = 'rgb(144,50,55)';
+                }
+               
+                i++;
+                } else {
+                    alert('please make sure it\'s string and not empty');
+                }
+                } while (confirm('do you like to add more name'));
+             }
+        const button = document.querySelector('button');
+        const input = document.querySelector('input');
+        button.addEventListener('click',function(event) {
+            name = input.value;
+            addName(name);
+            event.preventDefault();
+            input.value = '';
+        });
+        }
+    </script>
+  </head>
+  <body>
+      <form action="">
+          <span>Add name</span>
+          <input type="text" placeholder="please type a name" value="">
+          <button>Add</button>
+      </form>
+  </body>
+</html>

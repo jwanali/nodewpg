@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+  <script>
+      window.onload = function() {
+          const form = document.querySelector('form');
+          const formElements = form.elements;
+          form.onsubmit = function(event) {
+              event.preventDefault();
+              let condition1 = false;
+              let condition2 = false;
+              if (formElements[0].value.length === 0) {
+                formElements[0].setAttribute('class','error');
+                condition1 = true;
+              } else {
+                formElements[0].removeAttribute('class','error');
+                condition1 = false;
+              }
+              if (formElements[1].value.length === 0) {
+                formElements[1].setAttribute('class','error');
+                condition2 = true;
+              } else {
+                formElements[1].removeAttribute('class','error');
+                condition2 = false;
+              }
+              if (condition1 || condition2) {
+                alert ('Please input a username and password');
+              }
+          }
+      }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        let counter = 0
+        let mouseCounter = 0;
+        const ondblclick = function() {
+                counter += 1;
+                const div = document.querySelector('div');
+                div.innerHTML = `you had double clicked <span>click me!!</span> button for &nbsp &nbsp <span id = "counter">&nbsp &nbsp</span>&nbsp &nbsp times`;
+                const span = document.querySelector('span');
+                const spanCounter = document.querySelector('#counter');
+                span.style.color = 'red';
+                span.style.fontSize = '22px';
+                spanCounter.style.color = 'rgb(0,0,255)';
+                spanCounter.style.fontSize = '25px';
+                spanCounter.style.border = " 1px dashed red";
+                spanCounter.innerText = counter;
+            }
+            const onmouseover = function() {
+                const link = document.querySelector('a');
+                mouseCounter += 1;
+                switch (mouseCounter) {
+                    case 1: 
+                    link.style.backgroundColor = 'red';
+                    break;
+                    case 2 : 
+                    link.style.backgroundColor = 'blue';
+                    break;
+                    case 3: 
+                    link.style.backgroundColor = 'green';
+                    break;
+                    case 4 : 
+                    link.style.backgroundColor = 'gray';
+                    break;
+                    default : 
+                    link.style.backgroundColor = 'white';
+                }
+            }    
+        const onmouseout = function() {
+            const link = document.querySelector('a')
+            alert(`The link background color is: ${link.style.backgroundColor}`);
+        }
+
+        window.onload = function () {
+            const firstButton = document.querySelector('#firstButton');
+            const link = document.querySelector('a');
+            alert('please double click on click me button')
+            firstButton.ondblclick = ondblclick;
+            link.onmouseover = onmouseover;
+            link.onmouseout = onmouseout;
+
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        const clickHandler = function() {
+            alert('You clicked an event listened element')
+        }
+        const dblClickHandler = function() {
+            const body = document.querySelector('body');
+            const childrenLenth = body.children.length;
+            const ul = document.createElement('ul');
+            for (let i = 0; i <= childrenLenth - 1; i++) {
+                let content = body.children[i].innerText;
+                let li = document.createElement('li');
+                li.innerText = content;
+                ul.appendChild(li);
+            }
+            body.appendChild(ul);
+        }
+        const greet = function() {
+            alert('we\'re using  firstButton as an event listener !!!');
+            console.log('hi');
+            firstButton.removeEventListener('click',clickHandler);
+        }
+        const linkHandler = function(event) {
+            event.preventDefault();
+            alert('This link doesn\'t send us to a differen page as we\'re preventing the default behaviour');
+        }
+        const htmlHandler = function(event) {
+            console.log(event.clientX);
+            console.log(event.clientY);
+        }
+        const keyHandler = function(event) {
+            const charCode = event.charCode;
+            const pressedKey = String.fromCharCode(charCode);
+            console.log(`You pressed the ${pressedKey} key with the ${charCode} code`)
+        }
+        window.onload = function() {
+            const html = document.querySelector('html');
+            const firstButton = document.querySelector('#firstButton');
+            const secondButton = document.getElementById('secondButton');
+            const thirdButton = document.querySelector('#thirdButton');
+            const link = document.querySelector('a');
+            const body = document.querySelector('body');
+            body.addEventListener('keypress',keyHandler);
+            firstButton.addEventListener('click', clickHandler);
+            thirdButton.addEventListener('dblclick',dblClickHandler);
+            secondButton.onclick = secondButton.addEventListener('click',greet);
+            link.addEventListener('click',linkHandler);
+            html.addEventListener('click',htmlHandler);
+        }
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <button id="thirdButton">Double click to read the doc content</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

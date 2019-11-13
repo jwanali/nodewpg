@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <script>
+      window.onload = function() {
+      const ul = document.querySelector('ul');
+      console.log(ul);
+      const children = ul.children;
+      const secondChild = children[1];
+      secondChild.setAttribute('class', 'green');
+      const fourthChid = children[3];
+      fourthChid.setAttribute('class', 'red');
+      console.log(fourthChid.parentElement);
+      const parent = secondChild.parentElement;
+      parent.setAttribute('class', 'orange');
+      fourthChid.nextElementSibling.setAttribute('class','darkRed');
+      fourthChid.previousElementSibling.setAttribute('class','lightGreen')
+      }
+
+  </script>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color:green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+    .darkRed {
+        color: rgb(63, 5, 5);
+    }
+    .lightGreen {
+        color: rgb(123, 238, 123);
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

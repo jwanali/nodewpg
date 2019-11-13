@@ -1,0 +1,12 @@
+let superHeroName = 'Batman';
+let name = 'wayne';
+let fly = false;
+let hasBatmobile = true;
+let life = 45;
+let freeTime = null;
+console.log('superHeroName','//',superHeroName,typeof superHeroName);
+console.log('Name',name, '//',typeof name);
+console.log('fly',fly,'//', typeof fly);
+console.log('hasBatmobile','//',hasBatmobile,typeof hasBatmobile);
+console.log('life',life,'//', typeof life);
+console.log('freeTime',freeTime,'//',typeof freeTime);

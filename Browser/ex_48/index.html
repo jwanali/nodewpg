@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+      input { box-shadow: 5px 3px gray ;
+      }
+  </style>
+  <script>
+      window.onload = function() {
+          const form = document.querySelector('form');
+          const formInputElements = form.elements;
+          let usernameIndex;
+          let passwordIndex;
+          for (let i = 0; i <= formInputElements.length - 2; i++) {
+              if (formInputElements[i].id === 'username') {
+                  usernameIndex = i;
+              }
+              if (formInputElements[i].id === 'pass') {
+                  passwordIndex = i;
+              }
+              formInputElements[i].onfocus = function() {
+                 formInputElements[i].style.boxShadow = " 5px 3px aqua";
+                 formInputElements[i].style.color = 'blueviolet';
+              }
+              formInputElements[i].onblur =function() {
+
+                formInputElements[i].style.boxShadow = "none";
+                formInputElements[i].style.color = 'none';
+              }
+            }
+            form.onsubmit = function(event) {
+              event.preventDefault();
+                alert(`The username is: ${formInputElements[usernameIndex].value} and the password is : ${formInputElements[passwordIndex].value}`);
+            }
+      }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+</body>
+</html>

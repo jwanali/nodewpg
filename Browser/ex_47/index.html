@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Checkbox</title>
+  <script>
+      window.onload = function() {
+          const form = document.querySelector('form');
+          form.onsubmit = function(event) {
+              event.preventDefault();
+              const checkboxes = form.elements;
+              const checkboxesarray = [];
+              let index = 0;
+              for (let i = 0; i <= checkboxes.length - 1; i++) {
+                  if(checkboxes[i].checked) {
+                      checkboxesarray [index] = checkboxes[i].value;
+                      index += 1;
+                  }
+              };
+              if (checkboxesarray.length === 0) {
+                alert ('Please at least select a superheroe');
+              } else if (checkboxesarray.length === 1) {
+                alert (`The best superheroe is: ${checkboxesarray[0]}`);
+              } else {
+                alert (`The best superheores are: ${checkboxesarray}`)
+              }
+          }
+        }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="checkbox" name="superheroe" value="Wolverine" > Wolverine
+    <input type="checkbox" name="superheroe" value="The Invisible Woman"> The Invisible Woman
+    <input type="checkbox" name="superheroe" value="Iron Man"> Iron Man
+    <input type="checkbox" name="superheroe" value="Superman"> Superman
+    <input type="checkbox" name="superheroe" value="Daredevil"> Daredevil
+    <input type="checkbox" name="superheroe" value="The Flash"> The Flash
+    <input type="checkbox" name="superheroe" value="Captain America"> Captain America
+    <input type="checkbox" name="superheroe" value="Wonder Woman"> Wonder Woman
+    <input type="checkbox" name="superheroe" value="Spider-Man"> Spider-Man
+    <input type="checkbox" name="superheroe" value="Batman"> Batman
+    <input type="submit" name="submit" value="Submit" />
+  </form>
+</body>
+</html>

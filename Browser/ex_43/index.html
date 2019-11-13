@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <style>
+      div.propertiesLabel {
+          color: red;
+          font-size: 25px;
+          text-decoration: underline green;
+          padding: 10px  10px 10px 1px;
+          margin: 10px 10px 10px 0px;
+      }
+      div.properties {
+          font-size: 18;
+          font-family: Arial, Helvetica, sans-serif;
+
+      }
+  </style>
+  <script>
+      const printFormPrpperties = function() {
+        const form = document.querySelector('form');
+          const action = form.action;
+          const method = form.method;
+          const enctype = form.enctype;
+          const name = form.name;
+          const properties = [{
+              propertiesName: 'action',
+              propertiesValue: action
+        }, 
+        {
+              propertiesName: 'method',
+              propertiesValue: method,
+        }, 
+        {
+              propertiesName: 'enctype',
+              propertiesValue: enctype,
+        },
+        {
+              propertiesName: 'name',
+              propertiesValue: name,
+       }];
+          const body = document.querySelector('body');
+          const div = document.createElement('div');
+          div.setAttribute('class','propertiesLabel')
+          div.innerText ='form properties:'
+          body.appendChild(div);
+          properties.forEach(function( property) {
+              let div = document.createElement('div');
+              div.setAttribute('class','properties')
+              div.innerText =`${property.propertiesName}: ${property.propertiesValue}`;
+              body.appendChild(div);
+          })
+      }
+      window.onload = printFormPrpperties;
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>

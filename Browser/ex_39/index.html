@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+
+        window.onload = function () {
+            const firstButton = document.querySelector('#firstButton');
+            let counter = 0
+            alert('please double click on click me button')
+           
+            firstButton.ondblclick = function() {
+                counter += 1;
+                const div = document.querySelector('div');
+                div.innerHTML = `you had double clicked <span>click me!!</span> button for &nbsp &nbsp <span id = "counter">&nbsp &nbsp</span>&nbsp &nbsp times`;
+                const span = document.querySelector('span');
+                const spanCounter = document.querySelector('#counter');
+                span.style.color = 'red';
+                span.style.fontSize = '22px';
+                spanCounter.style.color = 'rgb(0,0,255)';
+                spanCounter.style.fontSize = '25px';
+                spanCounter.style.border = " 1px dashed red";
+                spanCounter.innerText = counter;
+            }
+        };
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

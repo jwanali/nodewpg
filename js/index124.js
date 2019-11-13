@@ -1,0 +1,2 @@
+const movies = ['turtle can fly','Incredibles 2','Ready Player One','Mission: Impossible - Fallout','four minutes','Half Moon','The Lord of the Rings','The Legend of 1900','yol "the way"','Bohemian Rhapsody'];
+console.log(movies[0],'\n',movies[movies.length-1]);

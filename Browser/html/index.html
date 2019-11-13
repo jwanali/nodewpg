@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        window.onload = function() {
+           alert('the document loaded');
+           const body = document.querySelector('body');
+           const redSpan = document.querySelectorAll('span.red');
+           const blueSpans = document.querySelectorAll('span.blue');
+           const pinkSpans = document.querySelectorAll('span.pink');
+           const greenSpans = document.querySelectorAll('span.green');
+           const redDivs = document.querySelectorAll('div.red');
+           const greenDivs = document.querySelectorAll('div.green');
+           const pinkDivs = document.querySelectorAll('div.pink');
+           const nlueDivs = document.querySelectorAll('div.blue');
+           const div = document.querySelector('div');
+           console.log(body);
+         body.onkeypress = function (event) {
+         switch (event.key) {
+               case 'a' :
+               body.innerHTML = '<div>hello<dive>'
+                   break;
+               }
+        }
+         }; 
+    </script>
+    <title>Document</title>
+    <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color:green;
+    }
+    
+    .blue {
+      color: blue;
+    }
+    .orange {
+      color: orange;
+    }
+    .darkRed {
+        color: rgb(63, 5, 5);
+    }
+    .lightGreen {
+        color: rgb(123, 238, 123);
+    }
+    .bold {
+      font-weight: bold;
+    }
+    
+    .striked {
+      text-decoration: line-through;
+    }
+    a {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .menu {
+      display: block;
+      width: 400px;
+      border: 1px solid black;
+      background-color: #eee;
+      padding: 5px 0 5px 10px; 
+    }
+
+    a.menu {
+      color: black;
+      text-decoration: none;
+    }
+
+    div:hover {
+      background-color: #DDD;
+      color: red;
+    }
+
+    a.green {
+      color: green;
+    }
+    a.azul {
+      color: blue;
+    }
+    a.rojo {
+      color: red;
+    }
+    </style>
+ </head>
+<body>
+    <div class="red">Hi I'm div number 1 in red</div>
+    <div class="blue">Hi I'm div number 1 in blue</div>
+    <div class="pink">Hi I'm div number 1 in pink</div>
+    <div class="green">Hi I'm div number 2 in green</div>
+    <span class="red">Hi I'm span number 1 in red</span>
+    <span class="blue">Hi I'm span number 2 in blue</span>
+    <span class="green">Hi I'm span number 1 in green</span>
+    <span class="pink">Hi I'm span number 2 in pink</span>
+    <a href="#">welcom</a>
+    <input type="text">
+    
+</body>
+</html>

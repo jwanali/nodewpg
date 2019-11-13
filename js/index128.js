@@ -1,0 +1,10 @@
+let icecreamflavor = ['orange','apple','black berry','mint','blue moon','cherry','chocolate','cookies and cream','french vanilla','banana'];
+const banana = icecreamflavor.pop();
+const frenchVanilla = icecreamflavor.pop();
+const cookiesAndCream = icecreamflavor.pop();
+const chocolate = icecreamflavor.pop();
+console.log(icecreamflavor);
+console.log(banana);
+console.log(frenchVanilla);
+console.log(cookiesAndCream);
+console.log(chocolate);

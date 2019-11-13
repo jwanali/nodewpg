@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        let count = 0;
+        let result = 0;
+      window.alert('This program adds all the numbers you input');
+      let aproval = window.confirm('do you like to start?');
+      if (aproval) {
+          do {
+                 let number = parseInt( window.prompt('please input a number'));
+                 if (typeof number === "number" && !isNaN(number) ) {
+                  result = result + number;
+                  window.alert(`The result so far is: ${result}`)
+                  count = count + 1;
+              } else {
+                  window.alert('please make sure that you entered a number');
+              }
+          } while (window.confirm('do you like to continue'));
+          let average = result / count;
+          window.alert(`The final result is:${result}\n
+          The user input ${count} numbers\n
+          The average is: ${average}`)
+      }
+     
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

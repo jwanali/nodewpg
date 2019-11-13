@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function() {
+            const title = document.querySelector('h1');
+            title.style.fontWeight = 'normal';
+            title.style.textDecoration = 'underline';
+            title.style.fontFamily =  'Arial, Helvetica, sans-serif';
+            title.style.textAlign = 'center';
+            title.style.padding = '10px';
+            title.style.margin = '10px';
+            const textContent = title.innerText;
+            
+            const paragraph = document.querySelector('p');
+            paragraph.style.color = 'green';
+            paragraph.style.fontWeight = 'bold';
+            paragraph.style.border = '1px  dashed black';
+            paragraph.style.textAlign = 'center';
+            paragraph.style.background = 'rgb(241, 179, 179)';
+            const paragraphContent = paragraph.innerText;
+            paragraph.innerText = textContent;
+            title.innerText = paragraphContent;
+            console.log(title);
+            console.log(paragraph);
+
+         
+          
+        }
+    </script>
+  <title>Texts</title>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>

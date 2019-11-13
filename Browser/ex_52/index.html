@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul { color: red; font-family: Arial, Helvetica, sans-serif; font-size: 20px ;font-weight: bold}
+        li{ color: blue; font-family: Arial, Helvetica, sans-serif; font-size: 16px ; font-weight: normal}
+    </style>
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            const body = document.querySelector('body');
+            const apiURL = 'https://swapi.co/api/films/';
+            fetch(apiURL).then(function(response) {
+                return response.json();
+            }).then(function(content) {
+                const result = content.results;
+                let index = 1;
+                console.log(content.results)
+                result.forEach(element => {
+                    let ul = document.createElement('ul');
+                    ul.innerText = `Film ${index} `;
+                    index++;
+                    let li1 = document.createElement('li');
+                    li1.innerText = `title: ${element.title}`;
+                    ul.appendChild(li1);
+                    let li2 = document.createElement('li');
+                    li2.innerText = `episode_id: ${element.episode_id}`;
+                    ul.appendChild(li2);
+                   let li3 = document.createElement('li');
+                    li3.innerText = `release_date: ${element.release_date}`;
+                    ul.appendChild(li3);
+                    let hr = document.createElement('hr');
+                    ul.appendChild(hr);
+                    body.appendChild(ul);
+                });
+            })
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+  <script>
+      window.onload = function() {
+          const form = document.querySelector('form');
+          const regex = /^[a-z0-9]+$/i;
+          const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          const formElements = form.elements;
+          form.onsubmit = function(event) {
+              event.preventDefault();
+              let condition0 = false;
+              let condition1 = false;
+              let condition2 = false;
+              const username = formElements[0];
+              const password = formElements[2];
+              const email = formElements[1]
+              if (regex.test(username.value) ) {
+                username.removeAttribute('class','error');
+                condition0 = true;
+              } else {
+                username.setAttribute('class','error');
+                condition0 = false;
+              }
+              if (emailRegex.test(email.value) ) {
+                email.removeAttribute('class','error');
+                condition1 = true;
+              } else {
+                email.setAttribute('class','error');
+                condition1 = false;
+              }
+              if (regex.test(password.value)) {
+                password.removeAttribute('class','error');
+                condition2 = true;
+              } else {
+                password.setAttribute('class','error');
+                condition2 = false;
+              }
+              if (condition0 && condition1 && condition2 ) {
+                alert ('Welcome you are logged in');
+              } else {
+                  alert('Please make sure to input a valid username, email and password');
+              }
+          }
+      }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="text" id="email" name="email" placeholder="email" >
+    <input type="password" id="pass" name="pass" placeholder="password" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

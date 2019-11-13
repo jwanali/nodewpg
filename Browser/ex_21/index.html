@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <script>
+        window.onload = function() {
+        let list = document.querySelector('li');
+        for (let i = 0; i <= 4; i++) {
+            list.setAttribute('class', 'orange');
+            if (i === 4) {
+                break;
+            }else {
+                list = list.nextElementSibling;
+            }
+        }console.log(list);
+       for (let i = 4; i >= 0; i--) {
+            if (i === 2) {
+                list.setAttribute('class', 'red')
+            }
+            if (i === 0) {
+                list.setAttribute('class', 'green')
+                break;
+            }
+            list = list.previousElementSibling;
+        }
+        console.log(list.parentElement);
+        console.log(list)
+        }
+  
+    </script>  
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

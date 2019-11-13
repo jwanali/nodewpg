@@ -1,0 +1,11 @@
+let text = 'game of thrones';
+let firstChar ;
+let secondChar ;
+let thirdChar ;
+firstChar = text.charAt(0);
+secondChar = text.charAt(5);
+thirdChar = text.charAt(8);
+let result = firstChar.concat(secondChar,thirdChar);
+result = result.toUpperCase();
+console.log('The final result is :',result);
+console.log('When the index isn\'t valid it will show:',text.charAt(15));
