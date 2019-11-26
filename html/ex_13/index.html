@@ -6,8 +6,9 @@
 <body>
     <h2>Creat User</h2><hr>
     <form action="" method="POST" enctype="multipart/form-data">
-        <label for="">Name</label>
-        <input type="text" placeholder="Name">
+        <label for="nameid">Name</label>
+       
+        <input type="text"  id="nameid" placeholder="Name">
         <select name="movie" id="value">
             <option value="deadpool">Deadpool</option>
             <option value="batman_vs_superman">Batman v Superman</option>
@@ -25,12 +26,10 @@
         </select><br><br>
         <label for="">please tell us about yourself</label>
         <textarea name="bio" id="" cols="30" rows="2"></textarea>
-        <label for="">Attach a file</label>
-        <input type="file" name="file" id="">
-        <button><a href="index.html" target="_self">Clear Form</a></button>
-        <button value="creat" name="creat_user">
-           <form action=""><a href="index.html"target="_self">
-           <input type="submit"> Add new user</a></form></button>
-    </form>
+        <label for="fileid">Attach a file</label>
+        <input type="file" name="file" id="fileid" multiple>
+        <button>Clear Form</button>
+        <button value="creat" name="creat_user"> Add new user</button>
+       </form>
 </body>
 </html>

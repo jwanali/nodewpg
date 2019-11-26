@@ -3,24 +3,69 @@
 <head>
     
     <title>login</title>
+    <style>
+       label {color: blue; text-transform: capitalize;}
+       legend{color: crimson;text-transform: capitalize;}
+       fieldset {border-color: crimson; border-radius: 20px; width:fit-content;;}
+    </style>
 
 </head>
 <body>
         <h1><center>login</center></h1><hr>
         
-        <form action="login.html" method="POST" enctype="application/x-www-form-urlencoded">
-           <div>
+        <form action="login.html" method="GET" enctype="application/x-www-form-urlencoded">
+           
              <fieldset >
-                 <legend>Username</legend>
-                  <label >
-               User name
-               <input type="text" name="username"  placeholder="Please input a username" size="30" minlength="5" maxlength="12" required>
-            password
-               <input type="password" name="password" placeholder="please type your password" size="30" minlength="5" maxlength="8" required>
-            </label>
-               <button type="submit" value="login" name="login">login</button>
+
+                 <legend>User-form</legend>
+                  <label for="nameid" > User-name</label>
+                 
+               <input type="text" name="username" id="nameid" placeholder="Please input a username" size="30" minlength="5" maxlength="12" required>
+                     
+               <label for="passwordid" >password</label>
+               <input type="password" name="password" id="passwordid" placeholder="please type your password" size="30" minlength="5" maxlength="8" required>
+               <hr>
+               <div>
+               Are you a Jets Fan?
+               <br>
+               <input type="radio" name="jetsfan" value="true" checked="checked"> Oh Yeahhhhhh, Go Jets!!!
+               
+               <input type="radio" name="jetsfan" value="false"> No
+               <input type="radio" name="jetsfan" value="false"> No <input type="radio" name="jetsfan" value="false"> No
+               </div>
+               <div>
+                     Select your favourite Harry Potter wizzards
+                     <br>
+                     <input type="checkbox" name="wizards" value="harry potter" checked="checked" > Harry Potter
+                     <br>
+                     <input type="checkbox" name="wizards" value="hermione granger" checked> Hermione Granger
+                     <br>
+                     <input type="checkbox" name="wizards" value="ron weasley"> Ron Weasley
+                     <br>
+                     <input type="checkbox" name="wizards" value="aberforth dumbledore"> Aberforth Dumbledore
+                     <br>
+               </div>
+               <hr>
+               <br>
+               <div>select your country
+                  <br>
+                     <select name="countries" multiple= "multiple" size="3">
+                           <option value="arg">Argentina</option>
+                           <option value="bra">Brasil</option>
+                           <option value="chl">Chile</option>
+                           <option value="can" selected>Canada</option>
+                           <option value="kurd">Kurdistan</option>
+                         </select>
+               </div>
+                   <br>
+               <textarea name="about"  placeholder="write something about you self"  required id="" cols="30" rows="10"></textarea>
+               <input type="image"  src="download.jfif" width="150px" height="100px">
+               <input type="submit" name="" id="">
+               <button><img src="download.jfif"  alt=""></button>
+               <button>submit</button>
+               
             </fieldset>
-        </div>
+        
         </form>
         
 </body>

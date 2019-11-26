@@ -12,16 +12,18 @@
     <form action="creat_user.html" method="GET" enctype="application/x-www-form-urlencoded" >
         <fieldset>
          <legend><h3>User Form</h3></legend>
-        <label>User Name:</label>
+        <label>User Name:
         <input type="text" name="user_name"  placeholder="user_name" size="30" maxlength="30" required >
-        <label for="">Birthday</label>
-        <input type="date" name="birthday">
-        <label for="">Email</label>
-        <input type="email" name="email"><br>
-        <label for="">Personal Site</label>
-        <input type="url" placeholder="https://" value="https://" name="personal site">
+        </label>
+        <label for="birthdayId">Birthday</label>
+        <input type="date" id="birthdayId" value="1979-10-01" name="birthday">
+        <label for="emailid">Email</label>
+        <input type="email" id="emailid" name="email" required><br>
+        <label for="personal-site-id">Personal Site</label>
+        <input type="url" placeholder="https://" id="personal-site-id" value="https://" name="personal site">
         <label>password</label>
-        <input type="password" name="password" id="password"placeholder="password" size="30" maxlength="8" required> <br>
+        <input type="password" name="password" id="password"placeholder="password" title="input symbol letters numbers" size="30" maxlength="8" required> <br>
+        <input type="text" name="name" pattern="^[a-zA-Z]+$" placeholder="name" title="Input only letters" /> 
         <h4>Superheroe</h4>    
         <input type="radio" name="Superheroe" value="1">
         <label >Superman</label>
@@ -44,7 +46,8 @@
          <label >Residen Evil</label>
          <input type="checkbox" name="" value="4" checked>
          <label >Uncharted</label><br> 
-         <input type="hidden" name="userid" value="2300">  <br>  
+         <input type="hidden" name="userid" value="2300"> 
+          <br>  
          <input type="image" src="img/register_button.png" title="register" height="40" width="55">
         <button type="submit">creat_user</button>
     
@@ -55,6 +58,7 @@
         <input type="search" name="q">
         <button type="submit">search</button>
     </form>
+    
 </body>       
     </html>     
         
