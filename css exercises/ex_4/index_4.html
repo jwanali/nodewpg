@@ -7,8 +7,13 @@
     *{color:green;}
     #login{color:gray}
     .red{color:red;}
-    label{color:pink;}
-    input[type="submit"]{color:brown;}
+    label {color:pink;}
+    input {color: rgb(238, 5, 238);}
+    input[type="submit"] {color:brown;}
+    div a {
+  color:darkmagenta;
+}
+
     </style>
   </head>
   <body>
@@ -17,7 +22,7 @@
     <form id="login">
       <div>
         <label for="username">Username</label>
-        <input name="username" id="username" placeholder="Username">
+        <input name="username" id="username" value="username" placeholder="Username">
       </div>
       <div>
           <label for="password">Password</label>
@@ -30,6 +35,12 @@
     <div>
       <p style="font-weight: bold" class="bold">This text is <span class="red">red</span></p>
       <a href="#" class="red">Link</a>
+    </div>
+    <div>
+      <a href="#">Link inside a div</a>
+      <p>
+        <a href="#">Link inside a parragraph inside a div</a>
+      </p>
     </div>
   </body>
 </html>

@@ -1,3 +1,17 @@
 h1{color:blue;}
 p{color:gray;}
-a{color:yellow;}
+a{color:yellow; font-size: larger;font-style: italic;}
+* {font-family: Georgia, 'Times New Roman', Times, serif;}
+.review {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;font-style: italic;
+    text-transform: capitalize;
+}
+#ready {
+    color: rgb(192, 243, 9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:26px;
+    font-style: italic;
+    text-transform: capitalize;
+}
