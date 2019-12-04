@@ -4,13 +4,28 @@
     <title>CSS Fonts and text</title>
    
     <style>
-        body{font-family: Arial, Helvetica, sans-serif;
+       @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+    }
+        body{font-family:  "Bitstream Vera Serif Bold",Arial, Helvetica, sans-serif;
         font-size: 16px;
               color:black;}
         h1,h2 {color: #ddd;text-shadow:1px 2px 3px #666;text-transform: uppercase}
         h1{font-size: 2em;}
         h1{font-size: 1.5em}
         p{line-height:1.4em;text-indent: 0.8em }
+        p {
+  text-decoration : underline dashed red;
+  text-indent: 5%;
+  text-shadow: 1px 1px 0px gray;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  line-height: 1.2;
+  text-align: justify;
+  
+
+}
         .main{text-align:justify}
         .bold{font:bold; color: coral;}
         #quote{letter-spacing: 2px; font-style: italic; color: darkcyan;}

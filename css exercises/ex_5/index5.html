@@ -3,7 +3,7 @@
   <head>
     <title>CSS Selectors</title>
     <style type="text/css">
-    a{color: red;}
+    a:link{color: red;}
     a:hover{color: orange;
     font-size: 25px;}
     a:visited{color: purple;}
@@ -11,12 +11,19 @@
    section > h1{color: coral;}
    h1::first-letter{color: black;}
    p + p{color:darkgoldenrod ;}
-   li + li{color: deeppink}
+   li ~ li{color: deeppink}
+  div[name = "sibling"]  span {color: blue;}
+  div[name = "sibling"] * {color: rgb(37, 220, 20);}
+  span ::first-letter {color: darkgreen;}
+  span :first-child {color:darkred;}
+
+   
+
    /*  or 
    li{color: deeppink;}
    ol::first-line{color: black;} */
    li{font-size: 20px}
-  
+  strong {color: red;}
   
   
    
@@ -47,6 +54,7 @@
           <li>Pseudo-elements</li>
           <li>Adjacent sibling combinator</li>
           <li>General sibling combinator</li>
+          <strong>this is an important section</strong>
         </ol>
         <foot>
           <p>News footer</p>
@@ -54,6 +62,15 @@
         </foot>
       </section>
     </article>
+    <div name="sibling">
+      <span>sibling1</span>
+      <span>sibling2</span>
+      <li>I am a list</li>
+      <span>sibling3</span>
+      <span>sibling4</span>
+      <span>sibling5 <li>Descendant selectors</li></span>
+     
+    </div>
     <foot>
       <hr>
       <p>Site footer</p>
