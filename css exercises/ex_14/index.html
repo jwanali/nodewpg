@@ -3,13 +3,22 @@
   <head>
     <title>Learning CSS</title>
     <style type="text/css">
-    body {font-family: Arial, Helvetica, sans-serif;
-    background-image: url(pattern.jpg);
-   
-    margin: 20px 0px;
-    padding: 0px}
-    .main {background-color: white; width: 960px; margin-bottom: 0px;margin-top: 0px;
-    margin: auto;padding: 20px;border-radius: 10px; box-shadow: 0px 10px 6px -6px #777}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: url(pattern.jpg);
+      background-repeat: repeat-x repeat-y;
+      margin: 20px 0px;
+      padding: 0px;
+      cursor: pointer;
+    }
+    .main {
+      background: linear-gradient(60deg, rgb(158, 158, 231), rgb(169, 233, 169));
+      width: 960px;
+      margin: 0px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow:  0 10px 6px -6px #777;
+    }
     </style>
   </head>
   <body>
@@ -24,3 +33,20 @@
       </div>
   </body>
 </html>
+<!--
+  Add a style element
+Select the body element and apply the following style:
+Use Arial, Helvetica, sans-serif as font family
+Use the pattern.jpg as background image
+The image must repet in x and y axis
+Top and bottom margin must be 20px, left and right set them to 0
+Remove padding from all sides
+Select the elements with the main class and apply the following style:
+Background color must be white
+The element must be 960px wide
+Remove top and bottom margin
+Center the element using margin auto
+Add 20px padding to all sides
+Add 10px of border radius
+Use the following box shadow values 0 10px 6px -6px #777
+-->

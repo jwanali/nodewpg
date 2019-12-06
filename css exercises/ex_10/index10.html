@@ -3,21 +3,58 @@
     <head>
         <title>Document</title>
         <style type="text/css">
-        body {margin: 0px; padding: 0px;background-color: white;
-        font-family: Arial, Helvetica, sans-serif;font-size: 16px}
-        header {background-color:black; color:white;
-        padding:10px 20px  }
-       header h2 {margin: 0px;text-shadow: 1px 2px 3px #666 }
-       .main {padding: 20px}
-       .main p {text-align:justify; }
-       .overflow {height: 150px;;overflow-y:scroll;}
-       footer {background-color: black;padding: 10px;text-align: center}
-       footer > a {color:white;text-decoration-line: none;font-size: 1.2em;border-right: solid white 1px;
-       margin-right: 10px;padding-right: 10px}
-       a:hover {color: gray;text-decoration-line: underline;font-weight: bold}
-       a:last-child {border-right: none}
-       .news {margin-top:10; box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1); padding-bottom: 5px;padding-right:10px;
-       padding-left: 10px}
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: white;
+            font-family: Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 20px 10px 20px;
+        }
+        h2 {
+            margin: 0px;
+            box-shadow: 1px 2px 3px #666;
+        }
+        .main {
+            padding: 20px;
+        }
+        .main p {
+            text-align: justify;
+        }
+        .overflow {
+            height: 150px;
+            overflow-y: scroll;
+        }
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: white;
+            font-size: 1.2em;
+            text-decoration-line: none;
+            border-right: 1px solid white;
+            margin-right: 10px;
+            padding-right: 10px;
+        }
+        a:hover {
+            color: gray;
+            text-decoration-line: underline;
+            font-weight: bold;
+        }
+        a:last-child{
+            border: none;
+        }
+        .news {
+            margin-top: 20px;
+            box-shadow:  0px 5px 10px 5px rgba(0,0,0,0.1);
+            padding: 5px 10px;
+        }
         </style>
     </head>
     <body>
@@ -55,3 +92,49 @@
         </footer>       
     </body>
 </html>
+<!--
+    Add a style element
+Select the body element and apply the following styles:
+All margin sides must be set to 0
+All padding sides must be set to 0
+The background color must be white
+Use Arial or Helvetica or sans-serif as font family
+Font size must be 16 pixels
+Select the header element and apply the following styles:
+The background color must be black
+Font color must be white
+Top and bottom padding must be 10 pixels
+Right and Left padding must be 20px
+Select the h2 element that's inside the header elemetn and apply the following styles:
+All margin sides must be set to 0
+Use text shadow with this configuration: 1px 2px 3px #666
+Select all elements with the main class and apply the following styles:
+All padding sides must be set to 20 pixels
+Select the parragraphs that are children of the main class elements and apply the following styles:
+The text must be justify aligned
+Select the elements with the overflow class and apply the following styles:
+The box must be 150 pixels tall
+The content of this element must be scrollable only over the y axis
+Select the footer element and apply the following styles:
+The background color must be black
+All padding sides must be set to 10 pixels
+The text must be center aligned
+Select all link elements that are children of the footer element and apply the following styles:
+Text must be white
+Remove the undeline decoration
+Text size must be 1.2em
+The right border must be 1px solid white
+Right margin must be 10 pixels
+Right Padding must be 10 pixels
+Select all links and use the hover pseudo class and apply the following styles:
+Text color must be gray
+Text decoration must be underline
+Also it must be bold
+Select the last link element using the last-child selector and apply the following styles:
+Remove the right border
+Select the elements with the news class and apply the following styles:
+Top margin must be 20 pixels tall
+The box should have the following shadow configuration: 0px 5px 10px 5px rgba(0,0,0,0.1)
+Top and bottom padding must be 5 pixels
+Right and left padding must be 10 pixels
+-->
