@@ -3,16 +3,38 @@
 <head>
   <title>Learing CSS</title>
   <style type="text/css">
-  body {margin: 0px; padding: 0px}
-  form {background-color: #eee; padding:10px 5px;text-align: right;
-  border-bottom: 1px #ddd solid }
-  input[type="text"], input[type="password"], button {display: inline-block;padding: 10px;
-  border: 1px solid #ddd;border-radius: 5px; margin-right: 5px;
-  outline:none}
-  input[type="text"], input[type="password"], button {border: 1px solid #EC576B;
-  box-shadow: 0px 6px 6px -6px #777}
-  button {background-color:#EC576B; color: white;margin-right: 0px }
-  button:hover {background-color: rgb(240, 50, 76); color: white; cursor: pointer; }
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+  form {
+    background-color: #eee;
+    padding: 10px 5px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+  input[type="text"], input[type="password"], button {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+  }
+  input[type="text"]:focus, input[type="password"]:focus, button:focus {
+    border: 1px solid#ec576b;
+    box-shadow: 0 6px 6px -6px #777;
+  }
+  button {
+    background-color: #ec576b;
+    color: white;
+    margin-right: 0;
+  }
+  button:hover {
+    background-color:rgb(240, 50, 76) ;
+    color: white;
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
@@ -23,3 +45,32 @@
   </form>
 </body>
 </html>
+<!--
+  Add a style element
+Select the body element and apply the following style:
+Remove margin and padding from all sides
+Select the form element and apply the following style:
+Background color must be #eee
+Add 10px padding to the top and bottom padding
+Add 5px padding to the left and right padding
+Right align text
+Add a 1px solid #ddd bottom border only
+Select the input type text, input type password and button elements and apply the following style:
+Display must be inline-block;
+Add 10px padding to all sides
+Add a 1px solid #ddd border to all sides
+Add a 5px border radius to all corners
+Add 5px to the right margin
+Remove the outline using the none value
+Select the focus pseudo class for input type text, input type password and button and apply the following style:
+Add a 1px solid #EC576B border to all sides
+Add a 0 6px 6px -6px #777 box shadow
+Select the button element and apply the following style:
+Background color must be #EC576B
+Font color must be white
+Remove the right margin (use value 0)
+Select the hover pseudo class from the button element and apply the following style:
+Background color must be rgb(240, 50, 76)
+Font color must be white
+Cursor must be pointer
+-->
