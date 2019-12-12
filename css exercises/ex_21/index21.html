@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learing CSS</title>
   <style type="text/css">
   div.container {
-                position: relative;
-                background: linear-gradient(180deg,#666,#ddd);
-                border: 2px solid #ccc;
-                height: 700px;
-
-                 }
-   div.container > div {position: absolute;
-                font-family: Arial, Helvetica, sans-serif;
-                color: white;
-                font-size: 80px;
-                font-weight: bold;
-                text-shadow:3px 6px 5px #000 ;
-                 }
-    div.one {bottom:45px;
-             right: 0px;}
-    div.two{top: 450px;
-            left: 10%}
-    div.three {top: 300px;
-    left: 40%}
-    div.four {top: 200px;
-    left: 30%;}
-    div.five {top: 100px;
-    right: 0;}
-    div.six {top: 0;
-    left: 0}
-    .six:hover {color:pink; background-color: black}
-    .five:hover{color: yellowgreen; background-color: black}
-    .four:hover{color: rgb(202, 89, 159); background-color: black}
-    .three:hover{color: rgb(235, 111, 11); background-color: black}
-    .two:hover{color: orangered; background-color: black}
-    .one:hover{color: rgba(125,100,225, 1); background-color: black}
+    position: relative;
+    background:linear-gradient(180deg, #666,#ddd);
+    border: 2px solid #ccc;
+    height: 700px;
+  }
+  div.container > div {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 3px 6px 5px #000;
+  }
+  div.one {
+    bottom: 0px;
+    right: 0px;
+  }
+  div.two {
+    top: 450px;
+    left: 40%;
+  }
+  div.three {
+    top: 300px;
+    left: 40%;
+  }
+  div.four {
+    top: 200px;
+    left: 30%;
+  }
+div.five {
+  top: 100px;
+  right: 0;
+}
+div.six {
+  top: 0px;
+  left: 0px;
+}
+    .six:hover {
+      position: absolute;
+      color:pink;
+      background-color: rgb(165, 159, 159);
+      }
+    .five:hover{
+      color: yellowgreen;
+    background-color: black
+    }
+    .four:hover{
+      color: rgb(202, 89, 159);
+      background-color: black
+      }
+    .three:hover{
+      color: rgb(235, 111, 11);
+       background-color: black
+       }
+    .two:hover{
+      color: orangered;background-color: black
+      }
+    .one:hover{
+      color: rgba(125,100,225, 1);
+      background-color: black
+      }
 
   </style>
 </head>
@@ -49,3 +80,37 @@
   </div>
 </body>
 </html>
+<!--
+  Add a style element
+Select the container class element and apply the following style:
+Position must be relative
+Background must be linear-gradient(180deg, #666, #ddd)
+Add a 2px solid #ccc border to all sides
+Make the element 700px tall
+Select the div element that are children of the container class element and apply the following style:
+Position must be absolute
+Use Arial, Helvetica, sans-serif as font family
+Font color must be white
+Font size must be 80px
+Make the font bold
+Add text shadow using the following value 3px 6px 5px #000
+Select the one class elements and apply the following style:
+Bottom must be 0
+Right must be 0
+Select the two class elements and apply the following style:
+Top must be 450px
+Left must be 40%
+Select the three class elements and apply the following style:
+Top must be 300px
+Left must be 40%
+Select the four class elements and apply the following style:
+Top must be 200px
+Left must be 30%
+Select the five class elements and apply the following style:
+Top must be 100px
+Right must be 0
+Select the six class elements and apply the following style:
+Top must be 0
+Left must be 0
+Change the values for each one to six class elements, try left, top, bottom and right
+-->
