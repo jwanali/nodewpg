@@ -27,6 +27,9 @@
         transform: translate(-150px, 0);
       }
     }
+    circle {
+      animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;
+    }
     html, body {
       margin: 0px;
       padding: 0px;
@@ -144,7 +147,26 @@
     <footer>
       <p>ComIT &amp; <span class="love">&lt;3</span></p>
     </footer>
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40"
+      stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
   </div>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+  </canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+    var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+    </script>
+    
 </body>
 </html>
 

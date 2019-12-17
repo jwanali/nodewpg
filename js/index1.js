@@ -1,5 +1,10 @@
-var First_name;
-var Last_name;
-var Age;
-var Address;
-var DateOfBirth;
+var First_name = "Jwan";
+var Last_name = "Ali";
+var Age = 40;
+var Address = "Oakland ave";
+var DateOfBirth = "Oct 1, 1979";
+console.log (First_name);
+console.log (Last_name);
+console.log (Age);
+console.log (Address);
+console.log (DateOfBirth);
