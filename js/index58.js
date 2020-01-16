@@ -1,4 +1,4 @@
-let hour = 17 ;
+let hour = 17.5 ;
 if (hour >= 5 && hour <= 12) {
     console.log('good morning');
 } else if (hour > 12 && hour <= 18) {

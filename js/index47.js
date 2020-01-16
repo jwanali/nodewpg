@@ -10,7 +10,7 @@ let array = [1,2,3,22,33,11,66,55,22,44,'hi','js'];
 console.log(array);
 console.log(student.charAt(17));
 console.log(student.includes('i'));
-console.log(student.indexOf('Yuriy'));
+console.log(student.indexOf('Ubeydullah'));
 console.log(student.repeat(4));
 console.log(student.replace('i',6));
 console.log(student.trim());
