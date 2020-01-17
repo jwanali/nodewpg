@@ -1,12 +1,29 @@
-let n = 14;
-let i = 1 ;
-while (i <= n) {
-     let c = 1;
-     let s = '';
-     while (c <= i) {
-        s =  s + '*';
-         c++;
+let numberOfRow = 25;
+let rowCounter = 1 ;
+while (rowCounter <= numberOfRow) {
+     let starCounter = 1;
+     let starString = '';
+     while (starCounter <= rowCounter) {
+        starString =  starString + '*';
+         starCounter++;
      }
-     console.log(s);
-     i++;
+     console.log(starString);
+     rowCounter++;
 }
+/**
+ * Create a new index72.js file
+Show the following output using while:
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+ */

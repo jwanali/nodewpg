@@ -1,15 +1,27 @@
-let n = 14;
-let i = 1 ;
-while (i <= n) {
-    if (i % 2 !== 0 ) {
-     let c = 1;
-     let s = '';
-     while (c <= i) {
-        s =  s + '*';
-         c++ 
-     }
-    
-     console.log(s);
+let numberOfRow = 25;
+let rowCounter = 1 ;
+while (rowCounter <= numberOfRow) {
+    if (rowCounter % 2 !== 0) {
+        let starCounter = 1;
+        let starString = '';
+        while (starCounter <= rowCounter) {
+           starString =  starString + '*';
+            starCounter++;
+        }
+        console.log(starString);
     }
-     i++;
+    
+     rowCounter++;
 }
+/**
+ * Exercise 74
+Create a new index74.js file
+Show the following output using while:
+*
+***
+*****
+*******
+*********
+***********
+*************
+ */
