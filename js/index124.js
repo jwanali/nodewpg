@@ -10,3 +10,33 @@ Define a movies array with at least 10 movies that you really like
 Show the first and last movie name from the movies array
 To show the last item you need to use the movies lenght property to make it dynamic
  */
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// expected output: Array [1, 100000, 21, 30, 4]
+const numbers = [1, 4,7, 2, 5, 'f',3,10000,17, 8, 9,'a','nf','d'];
+const sortedNumbers = numbers.sort(function(a, b) {
+    return a - b;
+  });
+
+console.log(sortedNumbers);
+// [ 1, 2, 3, 4, 5, 8, 9 ]
+console.log(numbers)
+console.log(numbers.reverse());
+console.log(numbers);
+const joinedNumbersByDash = numbers.join('-');
+
+console.log(joinedNumbersByDash);
+// 1 - 4 - 2 - 5 - 3 - 8 - 9
+
+const joinedNumbersByComma = numbers.join(',');
+
+console.log(joinedNumbersByComma);
+const joinedNumbers = numbers.join();
+console.log(joinedNumbers);
+console.log(numbers);
